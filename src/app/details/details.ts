@@ -10,13 +10,13 @@ import {HousingLocationInfo} from '../housinglocationinfo';
   styleUrl: './details.css',
 })
 export class Details {
-route: ActivatedRoute = inject(ActivatedRoute);
-housingLocationId = -1;
-housingService = inject(HousingService);
-housingLocation : HousingLocationInfo | undefined;
+  route: ActivatedRoute = inject(ActivatedRoute);
+  housingLocationId = -1;
+  housingService = inject(HousingService);
+  housingLocation : HousingLocationInfo | undefined;
 
 constructor() {
-this.housingLocationId = Number(this.route.snapshot.params['id']);
-this.housingLocation = this.housingService.getHousingLocationById(this.housingLocationId);
-}
+    this.housingLocationId = Number(this.route.snapshot.params['id']);
+    this.housingLocation = this.housingService.getHousingLocationById(this.housingLocationId);
+  }
 }
